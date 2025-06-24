@@ -8,11 +8,11 @@ After creating a project from this template, follow the documentation below in o
 
 1. Replace some common placeholders
 
-| value         | replace_with                | example                               |
-| ------------- | --------------------------- | ------------------------------------- |
-| `hello-world` | application name            | nginx, mattermost, beast-core, etc... |
-| `Hello World` | application name for humans | NGINX, Mattermost, Beast Core, etc... |
-| `PBME Mission App Template` | application description | `The greatest full-stack app PBME has ever seen` |
+| value                                                 | replace_with                  | example                                                |
+|-------------------------------------------------------|-------------------------------|--------------------------------------------------------|
+| `hello-world`                                         | application name              | nginx, mattermost, beast-core, etc...                  |
+| `Hello World`                                         | application name for humans   | NGINX, Mattermost, Beast Core, etc...                  |
+| `PBME Mission App Template`                           | application description       | `The greatest full-stack app PBME has ever seen`       |
 | `project-blue/templates/mission-app-template/images/` | container registry repository | `project-blue/narwhal-demo/prance/prance-app-1/images` |
 
 2. Review, determine your need, and update
@@ -20,7 +20,7 @@ After creating a project from this template, follow the documentation below in o
 <!-- TODO: write guidance on how to customize the template for a new application package -->
 
 3. Almost there...
-   - `mv README-template.md README.md`
-   - Follow the `CODEOWNERS-template.md` to update your `CODEOWNERS` file.
+   - Follow the `.gitlab/CODEOWNERS-template.md` to update your `.gitlab/CODEOWNERS` file, then delete `.gitlab/CODEOWNERS-template.md`.
+   - Replace this file with your real README file: `mv README-template.md README.md`
 
 You are ready to start integrating (and testing with CI) your application for PBME!

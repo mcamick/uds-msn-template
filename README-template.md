@@ -8,7 +8,7 @@ This application is designed to be deployed to the Project Blue Mission Environm
 
 The Hello World Package expects to be deployed on top of [UDS Core](https://github.com/defenseunicorns/uds-core) with the dependencies listed below being configured prior to deployment.
 
-#### Dependency information
+### Dependency information
 
 Add any dependency information here
 

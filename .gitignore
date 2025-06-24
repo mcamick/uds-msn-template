@@ -1,3 +1,6 @@
+# IDEs
+.idea
+
 # Container image and Zarf package artifacts
 *.tar
 *.tar.zst
