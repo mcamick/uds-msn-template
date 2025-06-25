@@ -32,7 +32,7 @@ include:
       push: "true"
 
   ## Zarf Package: Build
-  - component: $CI_SERVER_FQDN/project-blue/components/zarf-package/build@0.12.6
+  - component: $CI_SERVER_FQDN/project-blue/components/zarf-package/build@0.12.8
     inputs:
       dir: uds/
       version: $PACKAGE_TAG
@@ -41,42 +41,42 @@ include:
       destination_repository: oci://$CI_REGISTRY_IMAGE
 
   ## Zarf Package: Test
-  - component: $CI_SERVER_FQDN/project-blue/components/zarf-package/test@0.12.6
+  - component: $CI_SERVER_FQDN/project-blue/components/zarf-package/test@0.12.8
     inputs:
       task: integration
 
   ## Zarf Package: Scan (Trivy)
-  - component: $CI_SERVER_FQDN/project-blue/components/zarf-package/scan-trivy@0.12.6
+  - component: $CI_SERVER_FQDN/project-blue/components/zarf-package/scan-trivy@0.12.8
     inputs:
       ref: zarf-package-hello-world-amd64-$PACKAGE_TAG.tar.zst
 
   ## Zarf Package: Scan (Check Root)
-  - component: $CI_SERVER_FQDN/project-blue/components/zarf-package/scan-root@0.12.6
+  - component: $CI_SERVER_FQDN/project-blue/components/zarf-package/scan-root@0.12.8
     inputs:
       ref: zarf-package-hello-world-amd64-$PACKAGE_TAG.tar.zst
 
   ## Zarf Package: Scan (Grype)
-  - component: $CI_SERVER_FQDN/project-blue/components/zarf-package/scan-grype@0.12.6
+  - component: $CI_SERVER_FQDN/project-blue/components/zarf-package/scan-grype@0.12.8
     inputs:
       ref: zarf-package-hello-world-amd64-$PACKAGE_TAG.tar.zst
 
   ## Zarf Package: Scan (OSCAP)
-  - component: $CI_SERVER_FQDN/project-blue/components/zarf-package/scan-oscap@0.12.6
+  - component: $CI_SERVER_FQDN/project-blue/components/zarf-package/scan-oscap@0.12.8
     inputs:
       ref: zarf-package-hello-world-amd64-$PACKAGE_TAG.tar.zst
 
   ## Zarf Package: Scan (ZAP)
-  - component: $CI_SERVER_FQDN/project-blue/components/zarf-package/scan-zap@0.12.6
+  - component: $CI_SERVER_FQDN/project-blue/components/zarf-package/scan-zap@0.12.8
     inputs:
       test_task: dast-setup
 
   ## Zarf Package: Scan (ClamAV)
-  - component: $CI_SERVER_FQDN/project-blue/components/zarf-package/scan-clamav@0.12.6
+  - component: $CI_SERVER_FQDN/project-blue/components/zarf-package/scan-clamav@0.12.8
     inputs:
       ref: zarf-package-hello-world-amd64-$PACKAGE_TAG.tar.zst
 
   ## Zarf Package: Deploy
-  - component: $CI_SERVER_FQDN/project-blue/components/zarf-package/deploy@0.12.6
+  - component: $CI_SERVER_FQDN/project-blue/components/zarf-package/deploy@0.12.8
     inputs:
       cluster_type: eks
       eks_cluster_name: mission-inf-proto
@@ -84,7 +84,7 @@ include:
       config: uds/zarf-config-proto.yaml
 
   ## CTS Pipeline - Runs on Tag Pipelines
-  - component: $CI_SERVER_FQDN/project-blue/components/certificate-to-ship/cts@0.5.2
+  - component: $CI_SERVER_FQDN/project-blue/components/certificate-to-ship/cts@0.7.2
     inputs:
       zarf_package_name: hello-world
       needs: [zarf-package:build]
@@ -97,7 +97,7 @@ include:
   - component: $CI_SERVER_FQDN/project-blue/components/release/release@0.8.9
 
   ## Renovate: Dry Run
-  - component: $CI_SERVER_FQDN/project-blue/components/renovate/dry-run@0.9.2
+  - component: $CI_SERVER_FQDN/project-blue/components/renovate/dry-run@0.10.3
     inputs:
       github_read_token: $github_read_only_api_token
       gitlab_read_token: $BOT_TOKEN
@@ -106,7 +106,7 @@ include:
       dry_run: full
 
   ## Renovate: Scheduled
-  - component: $CI_SERVER_FQDN/project-blue/components/renovate/scheduled@0.9.2
+  - component: $CI_SERVER_FQDN/project-blue/components/renovate/scheduled@0.10.3
     inputs:
       github_read_token: $github_read_only_api_token
       gitlab_read_token: $BOT_TOKEN

@@ -13,7 +13,7 @@ includes:
 
   ## Zarf Package
   # renovate: depName=project-blue/components/zarf-package
-  - zarf-package: https://gitlab.sonic.mil/api/v4/projects/4187/repository/files/tasks%2Fzarf-package%2Eyaml/raw?ref=0.12.6
+  - zarf-package: https://gitlab.sonic.mil/api/v4/projects/4187/repository/files/tasks%2Fzarf-package%2Eyaml/raw?ref=0.12.8
 
   ## Lint
   # renovate: depName=project-blue/components/lint
@@ -25,11 +25,11 @@ includes:
 
   ## Renovate
   # renovate: depName=project-blue/components/renovate
-  - renovate: https://gitlab.sonic.mil/api/v4/projects/4120/repository/files/tasks%2Frenovate%2Eyaml/raw?ref=0.9.2
+  - renovate: https://gitlab.sonic.mil/api/v4/projects/4120/repository/files/tasks%2Frenovate%2Eyaml/raw?ref=0.10.3
 
   ## Certificate to Ship
   # renovate: depName=project-blue/components/certificate-to-ship
-  - cts: https://gitlab.sonic.mil/api/v4/projects/4255/repository/files/tasks%2Fcts%2Eyaml/raw?ref=0.5.2
+  - cts: https://gitlab.sonic.mil/api/v4/projects/4255/repository/files/tasks%2Fcts%2Eyaml/raw?ref=0.7.2
 
   ## Local
   - local: tasks/local.yaml
