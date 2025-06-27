@@ -2,12 +2,12 @@
 kind: ZarfPackageConfig
 metadata:
   name: hello-world
-  version: "###ZARF_PKG_TMPL_VERSION###"
+  version: "1.0.0"
   description: "UDS Mission App Template"
 
 constants:
   - name: VERSION
-    value: "###ZARF_PKG_TMPL_VERSION###"
+    value: "1.0.0"
 
 variables:
   - name: DOMAIN
@@ -21,15 +21,15 @@ components:
     charts:
       - name: uds-hello-world-config
         namespace: hello-world
-        version: 0.0.0 # x-release-it-version
+        version: 1.0.0
         localPath: chart/
         valuesFiles:
           - values.yaml
       - name: hello-world
-        version: 0.0.0 # x-release-it-version
+        version: 1.0.0
         localPath: ../chart/
         namespace: hello-world
         valuesFiles:
           - values.yaml
     images:
-      - "registry.sonic.mil/project-blue/templates/mission-app-template/images/hello-world:###ZARF_PKG_TMPL_VERSION###"
+      - "nginx:latest"

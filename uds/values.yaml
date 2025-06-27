@@ -2,9 +2,9 @@
 
 ## hello-world chart values
 image:
-  repository: registry.sonic.mil/project-blue/templates/mission-app-template/images/hello-world
+  repository: docker.io/nginx
   pullPolicy: Always
-  tag: "###ZARF_CONST_VERSION###"
+  tag: "latest"
 
 serviceAccount:
   create: false

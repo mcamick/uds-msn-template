@@ -1,4 +1,4 @@
-FROM registry1.dso.mil/ironbank/opensource/nginx/nginx:1.27.5
+FROM nginx:latest
 
 USER root
 
