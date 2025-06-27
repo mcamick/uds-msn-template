@@ -3,7 +3,7 @@ kind: ZarfPackageConfig
 metadata:
   name: hello-world
   version: "###ZARF_PKG_TMPL_VERSION###"
-  description: "PBME Mission App Template"
+  description: "UDS Mission App Template"
 
 constants:
   - name: VERSION
