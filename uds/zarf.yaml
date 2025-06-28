@@ -32,4 +32,4 @@ components:
         valuesFiles:
           - values.yaml
     images:
-      - "nginx:latest"
+      - "custom-nginx:latest"

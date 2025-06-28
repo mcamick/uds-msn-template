@@ -2,7 +2,7 @@
 
 ## hello-world chart values
 image:
-  repository: docker.io/nginx
+  repository: custom-nginx
   pullPolicy: Always
   tag: "latest"
 
@@ -10,15 +10,12 @@ serviceAccount:
   create: false
   automount: false
 
-podSecurityContext:
-  fsGroup: 997
+podSecurityContext: {}
 
 securityContext:
   capabilities:
     drop:
       - ALL
-  runAsNonRoot: true
-  runAsUser: 997
 
 service:
   port: 8080
